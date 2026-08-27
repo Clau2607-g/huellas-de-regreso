@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buscar Mascotas | Huellas de Regreso</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img src="img/logo.png" alt="Logo">
+
+        </a>
+
+        <div>
+
+            <h2>Huellas de Regreso</h2>
+
+            <p>Vínculos restaurados, corazones en paz.</p>
+
+        </div>
+
+    </div>
+
+    <nav>
+
+        <a href="index.html">Inicio</a>
+        <a href="reportar.html">Reportar</a>
+        <a href="buscar.html">Buscar</a>
+        <a href="historias.html">Historias</a>
+        <a href="contacto.html">Contacto</a>
+
+    </nav>
+
+</header>
+
+<section class="busquedaPagina">
+
+    <h1>Buscar Mascotas</h1>
+
+    <p class="subtitulo">
+
+        Encuentra mascotas perdidas o encontradas utilizando los filtros disponibles.
+
+    </p>
+
+    <div class="filtros">
+
+        <input
+            type="text"
+            id="buscarNombre"
+            placeholder="🔍 Buscar por nombre">
+
+        <select id="filtroEstado">
+
+            <option value="">Todos los estados</option>
+            <option value="Perdido">Perdido</option>
+            <option value="Encontrado">Encontrado</option>
+
+        </select>
+
+        <select id="filtroEspecie">
+
+            <option value="">Todas las especies</option>
+            <option value="Perro">Perro</option>
+            <option value="Gato">Gato</option>
+            <option value="Otro">Otro</option>
+
+        </select>
+                <input
+            type="text"
+            id="buscarCiudad"
+            placeholder="📍 Ciudad">
+
+        <button id="btnBuscar" type="button">
+
+            Buscar
+
+        </button>
+
+    </div>
+
+    <div id="listaMascotas" class="contenedor-tarjetas">
+
+        <!-- Aquí aparecerán automáticamente las mascotas -->
+
+    </div>
+
+    <div
+        id="sinResultados"
+        style="display:none; text-align:center; margin-top:40px;">
+
+        <h2>🐾 No se encontraron mascotas.</h2>
+
+        <p>Intenta cambiar los filtros de búsqueda.</p>
+
+    </div>
+    </section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-contenedor">
+
+        <div class="footer-col">
+
+            <h3>Huellas de Regreso</h3>
+
+            <p>
+                Ayudamos a reunir mascotas perdidas con sus familias mediante una plataforma gratuita, rápida y fácil de usar.
+            </p>
+
+        </div>
+
+        <div class="footer-col">
+
+            <h3>Enlaces</h3>
+
+            <a href="index.html">Inicio</a>
+            <a href="reportar.html">Reportar</a>
+            <a href="buscar.html">Buscar</a>
+            <a href="historias.html">Historias</a>
+            <a href="contacto.html">Contacto</a>
+
+        </div>
+
+        <div class="footer-col">
+
+            <h3>Contáctanos</h3>
+
+            <p>📍 Cartago, Valle del Cauca</p>
+            <p>📧 contacto@huellasderegreso.com</p>
+            <p>📞 +57 321 547 4450</p>
+
+        </div>
+
+        <div class="footer-col">
+
+            <h3>Síguenos</h3>
+
+            <div class="redes">
+
+                <a href="#">📘</a>
+                <a href="#">📷</a>
+                <a href="#">▶️</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+
+        © 2026 Huellas de Regreso | Todos los derechos reservados.
+
+    </p>
+
+</footer>
+
+<!-- BOTÓN WHATSAPP -->
+
+<a href="https://wa.me/573215474450"
+   class="whatsapp"
+   target="_blank">
+
+    <img src="img/whatsapp.png" alt="WhatsApp">
+
+</a>
+
+<script src="js/script.js"></script>
+<script src="js/mascotas.js"></script>
+
+</body>
+</html>

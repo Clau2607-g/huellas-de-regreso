@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huellas de Regreso</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+
+            <div>
+
+                <h2>Huellas de Regreso</h2>
+
+                <p>Vínculos restaurados, corazones en paz.</p>
+
+            </div>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">Inicio</a>
+            <a href="reportar.html">Reportar</a>
+            <a href="buscar.html">Buscar</a>
+            <a href="historias.html">Historias</a>
+            <a href="contacto.html">Contacto</a>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="texto">
+
+            <h1>Reuniendo familias, una huella a la vez.</h1>
+
+            <p>
+
+                Publica mascotas perdidas o encontradas y ayuda a que regresen con quienes más las aman.
+
+            </p>
+
+            <a href="reportar.html" class="btnPrincipal">
+
+                Reportar una mascota
+
+            </a>
+
+            <a href="buscar.html" class="btnSecundario">
+
+                Buscar mascota
+
+            </a>
+
+        </div>
+
+        <div class="imagen">
+
+            <img src="img/hero.jpg" alt="Mascota">
+
+        </div>
+
+    </section>
+
+    <!-- ================= ESTADÍSTICAS ================= -->
+
+    <section class="estadisticas">
+
+        <div class="dato">
+
+            <h2>1250+</h2>
+
+            <p>Mascotas reunidas</p>
+
+        </div>
+
+        <div class="dato">
+
+            <h2>3400+</h2>
+
+            <p>Reportes publicados</p>
+
+        </div>
+
+        <div class="dato">
+
+            <h2>650+</h2>
+
+            <p>Mascotas encontradas</p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CÓMO FUNCIONA ================= -->
+
+    <section class="como-funciona">
+
+        <h2>¿Cómo funciona?</h2>
+
+        <div class="pasos">
+
+            <div class="paso">
+
+                <div class="icono">📢</div>
+
+                <h3>1. Publica</h3>
+
+                <p>
+
+                    Registra la información de tu mascota perdida o encontrada con fotografías, ubicación y datos de contacto.
+
+                </p>
+
+            </div>
+
+            <div class="paso">
+
+                <div class="icono">👥</div>
+
+                <h3>2. La comunidad ayuda</h3>
+
+                <p>
+
+                    Miles de personas podrán ver el reporte y ayudarte a compartir la información.
+
+                </p>
+
+            </div>
+
+            <div class="paso">
+
+                <div class="icono">🏡</div>
+
+                <h3>3. Regresa a casa</h3>
+
+                <p>
+
+                    Cuando alguien la encuentre podrá comunicarse contigo para que vuelva a su hogar.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= REPORTES ================= -->
+
+    <section class="reportes">
+
+        <h2>Reportes recientes</h2>
+
+        <div id="reportesInicio" class="contenedor-tarjetas">
+
+        </div>
+
+    </section>
+
+    <!-- ================= BUSCADOR ================= -->
+
+    <section class="busqueda">
+
+        <h2>Encuentra una mascota</h2>
+
+        <div class="buscador">
+
+            <select>
+
+                <option>Perdido</option>
+                <option>Encontrado</option>
+
+            </select>
+
+            <select>
+
+                <option>Perro</option>
+                <option>Gato</option>
+                <option>Otro</option>
+
+            </select>
+
+            <input type="text" placeholder="Ciudad o barrio">
+
+            <button>
+
+                🔍 Buscar
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= HISTORIAS DE ÉXITO ================= -->
+
+    <section class="historias-exito">
+
+        <h2>Mascotas que volvieron a casa ❤️</h2>
+
+        <p class="subtitulo">
+
+            Gracias a la ayuda de la comunidad, estas mascotas regresaron con sus familias.
+
+        </p>
+
+        <div class="historias-grid">
+                        <div class="historia-card">
+
+                <img src="mascotas/historia1.jpg" alt="Luna">
+
+                <h3>Luna</h3>
+
+                <p>
+                    Después de cinco días de búsqueda, Luna pudo regresar a casa gracias al reporte publicado en Huellas de Regreso.
+                </p>
+
+            </div>
+
+            <div class="historia-card">
+
+                <img src="mascotas/historia2.jpg" alt="Max">
+
+                <h3>Max</h3>
+
+                <p>
+                    Un ciudadano reconoció a Max gracias a la publicación y logró contactar a su familia.
+                </p>
+
+            </div>
+
+            <div class="historia-card">
+
+                <img src="mascotas/historia3.jpg" alt="Mía">
+
+                <h3>Mía</h3>
+
+                <p>
+                    Mía volvió a casa luego de que una persona encontrara su reporte en la plataforma.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= MAPA ================= -->
+
+    <section class="mapa">
+
+    <h2>Ubicaciones de Reportes</h2>
+
+    <div id="mapa" class="mapa-contenedor"></div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-contenedor">
+
+            <div class="footer-col">
+
+                <h3>Huellas de Regreso</h3>
+
+                <p>
+                    Ayudamos a reunir mascotas perdidas con sus familias mediante una plataforma gratuita y colaborativa.
+                </p>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h3>Enlaces rápidos</h3>
+
+                <a href="index.html">Inicio</a>
+                <a href="reportar.html">Reportar</a>
+                <a href="buscar.html">Buscar</a>
+                <a href="historias.html">Historias</a>
+                <a href="contacto.html">Contacto</a>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h3>Contacto</h3>
+
+                <p>📍 Cartago, Valle del Cauca</p>
+                <p>📧 contacto@huellasderegreso.com</p>
+                <p>📞 +57 321 547 4450</p>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h3>Síguenos</h3>
+
+                <div class="redes">
+
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                    <a href="#">▶️</a>
+                    <a href="#">🐦</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 Huellas de Regreso. Todos los derechos reservados.
+
+        </p>
+
+    </footer>
+
+    <!-- BOTÓN WHATSAPP -->
+
+    <a href="https://wa.me/573215474450"
+       class="whatsapp"
+       target="_blank">
+
+        <img src="img/whatsapp.png" alt="WhatsApp">
+
+    </a>
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/mapa.js"></script>
+    <script src="js/mascotas.js"></script>
+
+    
+
+
+</div>
+<script>
+
+</script>
+</body>
+</html>
+
