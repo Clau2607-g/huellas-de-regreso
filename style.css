@@ -279,8 +279,6 @@ nav a:hover::after{
 
     width:100%;
     max-width:none;
-    height: auto;
-    display: block;
     border-radius:30px;
     box-shadow:var(--sombra);
 
