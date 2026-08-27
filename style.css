@@ -1486,7 +1486,7 @@ img{
         rgba(0,0,0,.35),
         rgba(0,0,0,.35)
     ),
-    url("../img/hero.jpg");
+    url("hero.jpg");
 
     background-size:cover;
     background-position:center;
