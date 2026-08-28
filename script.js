@@ -415,3 +415,28 @@ function guardarMascotas(lista) {
 console.log("✅ Huellas de Regreso cargado correctamente.");
 
 
+// ==========================================
+// ESTADÍSTICAS
+// ==========================================
+
+const estadisticas = document.querySelector(".estadisticas");
+
+if (estadisticas) {
+
+    const mascotas = JSON.parse(localStorage.getItem("mascotas")) || [];
+
+    const totalReportes = mascotas.length;
+
+    const totalEncontradas = mascotas.filter(function(m) {
+        return m.estado === "Encontrado";
+    }).length;
+
+    const totalReunidas = mascotas.filter(function(m) {
+        return m.estado === "Encontrado";
+    }).length;
+
+    document.getElementById("totalReportes").textContent = totalReportes;
+    document.getElementById("totalEncontradas").textContent = totalEncontradas;
+    document.getElementById("totalReunidas").textContent = totalReunidas;
+
+}
